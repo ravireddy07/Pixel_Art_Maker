@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang='en'>
+<head>
+	<meta class="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<abbr title="My Pixel-Art-Maker App"><title>Pixel Art Maker</title></abbr>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+	<link rel='stylesheet' href='css/stylemodified.css'>
+	<!--<link rel='stylesheet' href='css/style.min.css'>  -->
+</head>
+
+<body>
+	<div class="navbar navbar--extended">
+		<nav class="nav__mobile"></nav>
+		<div class="container">
+			<div class="navbar__inner">
+				<abbr title="Udacity"><a href="https://in.udacity.com/" target="_blank" onclick="PlaySound('R2D2');"><img class="icon-style" src="images/udacity-svg.svg"></a></abbr>
+				<a href="https://in.udacity.com/google-india-scholarships" target="_blank" class="navbar__logo" onclick="PlaySound('R2D2');"><abbr title="Google India Schloarship-2018">Google India Schloarship</abbr></a>
+				<nav class="navbar__menu">
+					<ul>
+						<li><a href="https://www.gitshowcase.com/ravireddy07" target="_blank" onclick="PlaySound('R2D2');">About Me</a></li>
+						<li><a href="contact/contact.html" target="_blank" onclick="PlaySound('R2D2');">FeedBack</a></li>
+						<li><a href="https://github.com/ravireddy07/PCC2-Pixel-Art-Maker" target="_blank" onclick="PlaySound('R2D2');">GitHub</a></li>
+					</ul>
+				</nav>
+				<div class="navbar__menu-mob">
+					<a href="" id='toggle'>
+						<svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="hero">
+		<div class="hero__overlay hero__overlay--gradient"></div>
+		<div class="hero__mask"></div>
+		<div class="hero__inner">
+			<div class="container">
+				<div class="hero__content">
+					<div class="hero__content__inner" id='navConverter'>
+						<h1 class="hero__title">Pixel Art Maker</h1>
+						<p class="hero__text"><center><abbr title="Project Description">Pixel art is a form of digital art.<br> This Project is a Part of Project Completion Challenge-2.<br>Google India Scholarship 2018-Front-End Web-Developer NanoDegree(Udacity).<br>#GoogleUdacityIndiaScholars<br>#GISProjectChallenge2k18<br></abbr></center> </p>
+						<h2 class="hero__title">Choose Grid Size</h2>
+						<form id="sizePicker" onclick="PlaySound('R2D2');">
+							<abbr title="Instructions"><i class="fas fa-exclamation-triangle"></i> <span class="typed-style" id="typed"></span></abbr>
+							<br><br><b><abbr title="Instructions">Input: Only 2 Digits & not more than 50</abbr></b>
+							<br><br>
+
+							<abbr title="Enter Height">Grid Height:</abbr>
+							<input type="number" name="height" id="inputHeight" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" maxlength="2" min="1" max="50" value="15"/>
+							<br><abbr title="Enter Width">Grid Width:</abbr>
+							<input type="number" name="width"  id="inputWeight" onkeypress="return isNumeric(event)" oninput="maxLengthCheck(this)" maxlength="2" min="1" max="50" value="15"/>
+							<br><abbr title="Create Canvas"><input type="submit" class="button btun button__accent" onclick="PlaySound('R2D2');" value="Submit Value" ></abbr>
+							<abbr title="Delete Canvas"><input type="button" class="button btun button__accent" value="Reset Table" onclick="PlaySound('R2D2'); resetTable()"></abbr>
+						</form>
+
+						<h2 class="hero__title">Pick A Color</h2>
+
+						<b><label><center>Select from Color Picker Box</center></label></b>
+					  <br>
+						<abbr title="Select from Color Picker Box"><input type="color" id="colorPicker" onclick="PlaySound('R2D2');" value="#0d47a1"><br></abbr>
+						<br>
+						<label for="colorPicker"><b><center> Recommended Colors: </center></b></label><br>
+						<div class="predefined-colors" onclick="PlaySound('R2D2');">
+							<abbr title="White"><div id="white"></div></abbr>
+							<abbr title="Black"><div id="black"></div></abbr>
+							<abbr title="Red"><div id="red"></div></abbr>
+							<abbr title="Green"><div id="green"></div></abbr>
+							<abbr title="Blue"><div id="blue"></div></abbr>
+							<abbr title="Yellow"><div id="yellow"></div></abbr>
+							<abbr title="Purple"><div id="purple"></div></abbr>
+							<abbr title="Emperador"><div id="EMPERADOR"></div></abbr>
+							<br>
+							<abbr title="Navy"><div id="NAVY"></div></abbr>
+							<abbr title="Aqua"><div id="AQUA"></div></abbr>
+							<abbr title="Medow-Lark"><div id="MEDOWLARK"></div></abbr>
+							<abbr title="Olive"><div id="OLIVE"></div></abbr>
+							<abbr title="Lime"><div id="LIME"></div></abbr>
+							<abbr title="Maroon"><div id="MAROON"></div></abbr>
+							<abbr title="Gray"><div id="GRAY"></div></abbr>
+							<abbr title="Flame"><div id="Flame"></div></abbr>
+							<br>
+							<abbr title="Sailer-Blue"><div id="SAILERBLUE"></div></abbr>
+							<abbr title="Shaded-Pruce"><div id="SHADEDPRUCE"></div></abbr>
+							<abbr title="Golden-Lime"><div id="GOLDENLIME"></div></abbr>
+							<abbr title="Autumn-Maple"><div id="AutumnMaple"></div></abbr>
+							<abbr title="Silver"><div id="SILVER"></div></abbr>
+							<abbr title="Kale"><div id="Kale"></div></abbr>
+							<abbr title="Dusty-Cedar"><div id="DustyCedar"></div></abbr>
+							<abbr title="Potter's Clay"><div id="PotterClay"></div></abbr>
+							<br>
+							<abbr title="Bodacious"><div id="Bodacious"></div></abbr>
+							<abbr title="Peach-Echo"><div id="PeachEcho"></div></abbr>
+							<abbr title="Iced-Coffee"><div id="IcedCoffee"></div></abbr>
+							<abbr title="2008 Blue Izis"><div id="BlueIzis"></div></abbr>
+							<abbr title="2002 True Red"><div id="TrueRed"></div></abbr>
+							<abbr title="Chartreuse"><div id="Chartreuse"></div></abbr>
+							<abbr title="Dark Orange"><div id="DarkOrange"></div></abbr>
+							<abbr title="Indigo"><div id="Indigo"></div></abbr>
+						</div>
+
+						<abbr title="Click to Play Music"><button type="button"class="button btun button__accent" onclick="toggleMusic();"> Play/Stop Music</button></abbr>
+						<abbr title="Clear all Color"><button type="button" class="button btun button__accent" onclick="PlaySound('R2D2'); resetColour()" >Reset Colour</button></abbr>
+
+						<h2 class="hero__title">Design Canvas</h2>
+						<table id="pixelCanvas"></table>
+
+						<br><br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<marquee direction="left" scrollamount="10" loop="True" behavior="alternate" draggable="true" aria-dropeffect="move"> This can be Draggable.Follow with below links</marquee>
+	<div class="footer footer--dark">
+
+		<div class="container">
+			<div class="footer__inner" onclick="PlaySound('R2D2');">
+				<div class="footer__textLogo">Based on <a href="https://in.udacity.com/course/front-end-web-developer-nanodegree--nd001" target="_blank"><span class="footer-link-style"><abbr title="Front-End Web-Developer NanoDegree Program-Udacity">Front End Web Developer NanoDegree</span></a></div>
+				<div class="footer__data social-box">
+					<div class="footer__data__item">
+						<div class="footer__row">
+							<b>Created by</b><a href="https://ravireddy07.github.io/Google-Front-End-NanoDegree_PortFolio-Project-Project-Completion-Challenge/" target="_blank" class="footer__link"><span class="footer-link-style"><abbr title="Ravi Reddy">Ravi Kanth Reddy&nbsp&nbsp(@ravi_harry.fend)</span></a>
+						</div>
+					</div>
+					<div class="footer__data__item">
+						<div class="footer__row"><b>Created for</b><a href="https://twitter.com/akshtjn/status/1011561195629830145" target="_blank" class="footer__link"><span class="footer-link-style"><abbr title="PCC-2 Pixel Art Maker">Project Completion Challenge 2</span></a>
+						</div>
+					</div>
+					<div class="footer__data__item">
+					<div class="footer__row">
+						<a href="https://medium.com/@ravi_reddy_07/" target="_blank" class="social-icon footer__link"><span class="footer-link-style"><abbr title="My story"><i class="fa fa-medium" aria-hidden="true"></i></span></a>
+					</div>
+					<div class="footer__row">
+						<a href="https://github.com/ravireddy07" target="_blank" class="social-icon footer__link"><span class="footer-link-style"><abbr title="GitHub Profile"><i class="fa fa-github" aria-hidden="true"></i></span></a>
+					</div>
+					<div class="footer__row">
+						<a href="https://twitter.com/ravi_reddy_07" target="_blank" class="social-icon footer__link"><span class="footer-link-style"><abbr title="Twitter Profile"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+					</div>
+					<div class="footer__row">
+						<a href="https://instagram.com/ravi_reddy_07" target="_blank" class="social-icon footer__link"><span class="footer-link-style"><abbr title="Instagram Profile"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
+					</div>
+					<div class="footer__row">
+						<a href="https://www.linkedin.com/in/ravireddy07-harry/" target="_blank" class="social-icon footer__link"><span class="footer-link-style" ><abbr title="linkedin Profile"><i class="fa fa-linkedin" aria-hidden="true"></i></span></a>
+					</div>
+					<div class="footer__row">
+						<a href="https://facebook.com/ravi.kanth.7146557" target="_blank" class="social-icon footer__link"><span class="footer-link-style"><abbr title="FaceBook Profile"><i class="fa fa-facebook" aria-hidden="true"></i></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/design.min.js"></script>
+<script src="js/typed.min.js"></script>   <!-- -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="js/app.min.js"></script>
+<script src="js/toggle.js"></script>
+
+<audio id="R2D2" src="images/notification.mp3"></audio>
+
+<audio id="rancorEgg" src="images/PUBG.mp3"></audio>
+
+<script>
+var typed = new Typed("#typed", {
+	strings: ["You're Not Allowed to Enter more than 50","Wanna Check it...!!!! \n Go On", "Enter You're Value/Input"],
+	smartBackspace: true, // Default value
+	backDelay: 1000,
+	typeSpeed: 107,
+	loop: true
+
+});
+
+</script>
+
+</body>
+</html>

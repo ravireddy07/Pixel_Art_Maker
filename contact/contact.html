@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link href="contact.css" type="text/css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h2 class="header">Feedback Form</h2>
+    </div>
+    <form>
+      <div class="row clearfix">
+        <div class="col_half">
+          <label class="label-style">Name:</label>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+            <abbr title="Enter your Name"><input type="text" name="first_name" placeholder="Harry Potter" required /></abbr>
+          </div>
+        </div>
+        <div class="col_half">
+          <label class="label-style">Twitter/Slack Handle:</label>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+            <abbr title="Enter your UserName"><input type="text" name="last_name" placeholder="@ravi_harry.fend" /></abbr>
+          </div>
+        </div>
+      </div>
+      <div class="row clearfix">
+        <div class="col_half">
+          <label class="label-style">Email:</label>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <abbr title="Enter your email ID"><input type="email" name="email" placeholder="ravi@gmail.com" required /></abbr>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label class="label-style">Overall Experience:</label>
+        <div class="input_field">
+          <input type="radio" name="rating1" required/>Awesome
+          <input type="radio" name="rating1" required/>Good
+          <input type="radio" name="rating1" required/>Average
+          <input type="radio" name="rating1" required/>Fair
+          <input type="radio" name="rating1" required/>Poor
+        </div>
+      </div>
+      <div class="row clearfix">
+        <div>
+          <label class="label-style">Suggestions:</label>
+          <div class="textarea_field"> <span><i aria-hidden="true" class="fa fa-comment"></i></span>
+            <abbr title="Max 500 characters"><textarea maxlength="500" name="comments" placeholder="Max 500 characters"></textarea></abbr>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label class="label-style">How Much do You Like: </label>
+        <div>
+          <fieldset class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+            <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+            <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+            <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+            <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+            <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+          </fieldset>
+        </div>
+      </div>
+      <br><br><br><br><br><br>
+      <center><abbr title="Submit the Form"><button class="button" type="submit" value="Sumbit" ><img src="https://png.icons8.com/color/50/000000/send-letter.png"></button></abbr></center>
+    </form>
+  </div>
+</div>
+</body>
+</html>
